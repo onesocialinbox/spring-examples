@@ -1,4 +1,4 @@
-package com.example.vijay.demo;
+package com.example.springbatch.basic;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -18,4 +18,5 @@ public class SimpleTasklet implements Tasklet {
 		return RepeatStatus.FINISHED;
 	}
 
+	
 }

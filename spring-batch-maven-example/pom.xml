@@ -3,26 +3,34 @@
   <groupId>com.demo.vijay.examples</groupId>
   <artifactId>spring-batch-maven-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  	<properties>
+		<java-version>1.7</java-version>
+		<org.springframework-version>4.0.2.RELEASE</org.springframework-version>
+		<springbatch-version>2.2.5.RELEASE</springbatch-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
   <dependencies>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-core</artifactId>
-  		<version>4.1.6.RELEASE</version>
+  		<version>${org.springframework-version}</version>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework.batch</groupId>
   		<artifactId>spring-batch-core</artifactId>
-  		<version>3.0.3.RELEASE</version>
+  		<version>${springbatch-version}</version>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework.batch</groupId>
   		<artifactId>spring-batch-infrastructure</artifactId>
-  		<version>3.0.3.RELEASE</version>
+  		<version>${springbatch-version}</version>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-jdbc</artifactId>
-  		<version>4.1.6.RELEASE</version>
+  		<version>${org.springframework-version}</version>
   	</dependency>
   	<dependency>
   		<groupId>com.h2database</groupId>
@@ -32,7 +40,37 @@
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
-  		<version>4.1.6.RELEASE</version>
+  		<version>${org.springframework-version}</version>
   	</dependency>
   </dependencies>
+  <build>
+  	<plugins>
+  	            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+                    </additionalBuildcommands>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+  		 <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>${java-version}</source>
+                    <target>${java-version}</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+  	</plugins>
+  </build>
 </project>
