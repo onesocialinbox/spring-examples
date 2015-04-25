@@ -1,0 +1,9 @@
+TICKER,COMPANYNAME,INDUSTRY,PRICE
+IBM,International Business Machies,Tech,124.60
+MSFT,Microsoft,Tech,139.45
+ORCL,Oracle Corp,Tech,97.80
+CS,Credit Suisse,Finance,166.20
+BOSCH,Robert Bosch,Manufacturing,145.50
+INFY,Infosys,Tech,190.70
+WIPRO,Wipro Ltd,Tech,289.20
+DBS,DBS Bank,Banking,13.70
